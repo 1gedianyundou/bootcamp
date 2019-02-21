@@ -2,10 +2,9 @@
 <html>
 <body>
 
-<h2>HTML Forms</h2>
+<h2>Search Locations</h2>
 
 {% block content %}
-    <h1>Sign In</h1>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
@@ -20,5 +19,10 @@
     </form>
 {% endblock %}
 
+
+        {% block body %}
+            {{map.html}}
+            {{map.js}}
+        {% endblock %}
 </body>
 </html>

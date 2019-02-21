@@ -4,20 +4,13 @@
         <head>
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Flask Google Maps Example</title>
-            {{"decoupled-map"|googlemap_js(37.4419, -122.1419, varname="decoupledmap", markers=[(37.4419, -122.1419)])}}
-            {{mymap.js}}
-            {{sndmap.js}}
         </head>
 
-        {{googlemap("simple-map", lat, lon)}}
 
-        <h1></h1>
-
-
-        {% with map=googlemap_obj("another-map",  lat, lon, varname="anothermap", markers=[( lat, lon), (37.4300, -122.1400, "Hello!")]) %}
+        {% block body %}
             {{map.html}}
             {{map.js}}
-        {% endwith %}
+        {% endblock %}
+
     </body>
 </html>
